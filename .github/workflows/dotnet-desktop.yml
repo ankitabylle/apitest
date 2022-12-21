@@ -32,9 +32,9 @@ jobs:
           aws-region: us-east-2
     - name: install Lambda tools
       run: dotnet tool install -g Amazon.Lambda.Tools 
-    - name: install Lambda tools
+    - name: generate
       run: dotnet lambda package
-    - name: install Lambda tools
-      run: aws lambda update-function-code --function-name=apitest6 --zip-file=${{ env.FilePath }}
+    - name: publish
+      run: aws lambda update-function-code --function-name=apitest6 --zip-file=fileb://${{ env.FilePath }}
 
          
