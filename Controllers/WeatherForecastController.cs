@@ -25,7 +25,7 @@ namespace test1.Controllers
             {
                 Date = DateTime.Now.AddDays(index),
                 TemperatureC = Random.Shared.Next(-20, 55),
-                Summary = Summaries[3]
+                Summary = Summaries[1]
             })
             .ToArray();
         }
